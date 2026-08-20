@@ -1,0 +1,103 @@
+### ============================================
+### SECRETOS Y VARIABLES DE ENTORNO — máxima prioridad
+### ============================================
+.env
+.env.local
+.env.*.local
+**/.env
+!.env.example
+
+### ============================================
+### FRONTEND — React + Vite
+### ============================================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.vite/
+frontend/coverage/
+
+# Logs de npm/yarn/pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### ============================================
+### BACKEND — Spring Boot + Maven
+### ============================================
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/*.jar
+backend/*.war
+!backend/.mvn/wrapper/maven-wrapper.properties
+
+# Archivos de configuración local que sobreescriben application.yml
+backend/src/main/resources/application-local.properties
+backend/src/main/resources/application-local.yml
+
+### ============================================
+### DATA-SERVICE — Python / FastAPI
+### ============================================
+data-service/__pycache__/
+data-service/**/__pycache__/
+data-service/*.py[cod]
+data-service/.Python
+data-service/venv/
+data-service/.venv/
+data-service/env/
+data-service/*.egg-info/
+data-service/.pytest_cache/
+data-service/.mypy_cache/
+data-service/.ruff_cache/
+
+### ============================================
+### DOCKER
+### ============================================
+# Datos persistidos por volúmenes montados localmente (si alguna vez usan bind mount en vez de volumen nombrado)
+**/db_data/
+docker-compose.override.yml
+
+### ============================================
+### IDEs y editores
+### ============================================
+# IntelliJ IDEA (Spring Boot)
+.idea/
+*.iml
+*.iws
+
+# VS Code (frontend / Python / WSL)
+.vscode/
+!.vscode/extensions.json
+
+# Otros
+*.swp
+*.swo
+*~
+
+### ============================================
+### SISTEMA OPERATIVO
+### ============================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS (por si alguno prueba desde Mac en algún momento)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+### ============================================
+### LOGS Y ARCHIVOS TEMPORALES GENERALES
+### ============================================
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
